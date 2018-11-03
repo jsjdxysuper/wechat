@@ -1,0 +1,36 @@
+<!--pages/teachers/teachers.wxml-->
+<view class="myContainer">
+  <view class="myPage" style='display:flex;flex-direction:column;align-items:center;'>
+    <view class="split_x"></view>
+    <navigator url="/pages/teachers/teacherDetail/teacherDetail" hover-class="navigator-hover">
+      <view style='width:700rpx;display:flex;flex-direction:row;justify-content:space-between;align-items:center;background-color:white;border-radius: 15rpx;padding:15rpx;'>
+      
+        <view style='display:flex;flex-direction:row;align-items:center;margin-left:20rpx;'>
+          <image src="/utils/image/teacher1.jpg" style='width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>
+          <view>
+            <view style='font-size:35rpx;color:#888888'>darry</view>
+            <view>高级花艺师</view>
+          </view>
+        </view>
+        <view style=''>➣</view>
+        
+      </view>
+    </navigator>
+
+
+    <view class="split_m"></view><!--我是分割线-->
+
+    <view style='width:700rpx;display:flex;flex-direction:row;justify-content:space-between;align-items:center;background-color:white;border-radius: 15rpx;padding:15rpx;'>
+      <view style=';display:flex;flex-direction:row;align-items:center;margin-left:20rpx;'>
+        <image src="/utils/image/teacher2.jpg" style='width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>
+        <view>
+          <view style='font-size:35rpx;color:#888888'>Rose</view>
+          <view>花艺培训师</view>
+        </view>
+      </view>
+      <view style=''>➣</view>
+    </view>
+
+    <view class="split_m"></view><!--我是分割线-->
+  </view>
+</view>

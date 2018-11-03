@@ -1,0 +1,166 @@
+<!--pages/firstPage/firstPage.wxml-->
+<view class="myContainer">
+  <view class="myPage">
+  
+    <view style="background-color:white;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+      <view class="split_x"></view><!--我是分割器-->
+      <!--轮转图片-->
+      <view style='width:700rpx;'>
+        <swiper indicator-dots="true" autoplay="true" interval="2000" duration="490" style='width:700rpx;height:451rpx'>
+          <view  wx:for="{{imageUrls}}">
+          <swiper-item>
+            <image src="{{item}}"   style='width:700rpx;' />
+          </swiper-item>
+          </view>
+        </swiper>
+      </view><!--轮转图片-->
+
+      <view class="split_x"></view><!--我是分割器-->
+      <!--公司名称、位置、导航-->
+      <view style='display:flex;flex-direction:row;justify-content:space-around;width:100%;'>
+        <view style="display:flex;flex-direction:column;justify-content:space-around;">
+          <view class="font-size-xl">北京暿艺东方</view>
+          <view class="font-size-ss font-color-grey" >北京市朝阳区东四环中路78号楼11层12A11</view>
+        </view>
+        <navigator url="/pages/location/location" hover-class="navigator-hover">
+          <view style="display:flex;flex-direction:column;align-items:center;">
+            <view style="">
+              <image style="width: 50rpx; height: 50rpx;"  src="../../utils/image/location.png"></image>
+            </view>
+            <view class="font-size-ss">导航到店</view>
+          </view>
+        </navigator>
+      </view><!--公司名称、位置、导航-->
+
+      <view class="split_xx"></view>
+
+      <!--四个横向的图标菜单-->
+      <view class='icon-menu'>
+        <view >
+          <navigator url="/pages/course/selectedCourse/selectedCourse" hover-class="navigator-hover">
+            <view><image  class='menu-image'  src="../../utils/image/choicest.png"></image></view>
+            <view class='font-size-m'>精品课程</view>
+          </navigator>
+        </view>
+        <view >
+          <navigator url="/pages/course/courseSchedule/courseSchedule" hover-class="navigator-hover">
+            <view><image  class='menu-image'   src="../../utils/image/courseTable.png"></image></view>
+            <view class='font-size-m'>培训课表</view>
+          </navigator>
+        </view>
+        <view >
+          <navigator url="/pages/teachers/teacherList/teacherList" hover-class="navigator-hover">
+            <view><image class='menu-image'   src="../../utils/image/teacher.png"></image></view>
+            <view class='font-size-m'>授课老师</view>
+          </navigator>
+        </view>
+        <view >
+          <view><image  class='menu-image'   src="../../utils/image/video.png"></image></view>
+          <view class='font-size-m'>视频实录</view>
+        </view>
+      </view><!--四个横向的图标菜单-->
+    </view>
+    <view class="split_xx"></view>
+    <!--预约礼包-->
+    <view class="downSection" style="border-radius: 5px;background-image:url(https://www.liyang024.top/resources/background-red.svg);background-size: cover;height:120rpx;display:flex;justify-content:space-between;align-items:center;">
+      <view class="font-size-m" style='margin-left:20rpx;margin-left: 20rpx;color:white;'>预约礼包：日常插花教程</view>
+      <view style='background-color:white;border-radius: 5px;padding:10rpx 30rpx;color:#ff6621;margin-right: 20rpx;'>预约领取</view>
+    </view><!--预约礼包-->
+    <view class="split_xx"></view>
+    <!--体验课-->
+    <view style='display:flex;justify-content:space-between;' class="downSection">
+      <view style='display:flex;align-items:center;'>
+        <view style='width:10rpx;background-color:green;height:38rpx;margin-right:20rpx;'></view>
+        <view>体验课</view>
+      </view>
+      <view class="font-size-s font-color-grey" >更多 ></view>
+    </view><!--体验课-->
+<view class="split_s"></view>
+    <!--体验课内容-->
+    <view class="downSection" style="border-radius: 15rpx;background-image:url(https://www.liyang024.top/resources/background-blue.svg);background-size: cover;height:220rpx;display:flex;justify-content:space-between;align-items:center;">
+      <view style='height:100rpx;color:white;display:flex;flex-direction:column;justify-content:space-between;margin-left:50rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>花艺设计师基础课程</view>
+        <view class="font-size-ss">10人已报名</view>
+      </view>
+      <view style='height:120rpx;display:flex;flex-direction:column;justify-content:space-between'>
+        <view class="font-size-l" style='color:white;'>￥260.00</view>
+        <view style='background-color:white;border-radius: 5px;padding:10rpx 30rpx;color:#6699FF;margin-right: 20rpx;'>预约领取</view>
+      </view>
+    </view><!--体验课内容-->
+
+    <view class="split_x"></view>
+
+    <!--精品课程-->
+    <view style='display:flex;justify-content:space-between;' class="downSection">
+      <view style='display:flex;align-items:center;'>
+        <view style='width:10rpx;background-color:green;height:38rpx;margin-right:20rpx;'></view>
+        <view>精品课程</view>
+      </view>
+      <navigator url="/pages/course/selectedCourse/selectedCourse" hover-class="navigator-hover">
+        <view class="font-size-s font-color-grey" >更多 ></view>
+      </navigator>
+    </view><!--精品课程-->
+    <view class="split_s"></view>
+    <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey">全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+    <view class="split_x"></view>
+    <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey" >全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+
+    <view class="split_x"></view>
+    <!--视频实录标头-->
+    <view style='display:flex;justify-content:space-between;' class="downSection">
+      <view style='display:flex;align-items:center;'>
+        <view style='width:10rpx;background-color:green;height:38rpx;margin-right:20rpx;'></view>
+        <view>视频实录</view>
+      </view>
+      <view class="font-size-s font-color-grey" >更多 ></view>
+    </view><!--视频实录标头-->
+    <view style="height:10rpx;"></view>
+
+    <!--视频1-->
+    <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
+      <view><video style='width:100%' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+
+      </video></view>
+      <view class="font-size-l" style='margin-left:20rpx;'>简易晾花架制干花</view>
+    </view><!--视频1-->
+    <view style="height:25rpx;"></view>
+    <!--视频2-->
+    <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
+      <view><video style='width:100%' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+
+      </video></view>
+      <view class="font-size-l" style='margin-left:20rpx;'>简易晾花架制干花</view>
+    </view><!--视频2-->
+    <view style="height:25rpx;"></view>
+    <!--视频3-->
+    <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
+      <view><video style='width:100%' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+
+      </video></view>
+      <view class="font-size-l" style='margin-left:20rpx;'>简易晾花架制干花</view>
+    </view><!--视频3-->
+    <view class="split_m"></view>
+  </view><!-- myPage-->
+</view><!-- myContainer-->

@@ -1,0 +1,19 @@
+{
+  "pages": [
+    
+    "pages/firstPage/firstPage",
+    "pages/logs/logs",
+    "pages/demo/demo",
+    "pages/location/location",
+    "pages/teachers/teacherList/teacherList",
+    "pages/teachers/teacherDetail/teacherDetail",
+    "pages/course/selectedCourse/selectedCourse",
+    "pages/course/courseSchedule/courseSchedule"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00CED1",
+    "navigationBarTitleText": "暿艺东方",
+    "navigationBarTextStyle": "white"
+  }
+}

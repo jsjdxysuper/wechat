@@ -1,0 +1,69 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.myContainer{
+
+}
+
+.myPage{
+  width:750rpx;
+  margin-left:auto;
+  margin-right:auto;
+}
+.downSection{
+  width:730rpx;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.split_ss{
+  height:5rpx;
+}
+.split_s{
+  height:10rpx;
+}
+.split_m{
+  height:20rpx;
+}
+.split_x{
+  height:30rpx;
+}
+.split_xx{
+  height:40rpx;
+}
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #eeeeee;  
+}
+.font-size-ss{
+  font-size:25rpx;
+}
+.font-size-s{
+  font-size:30rpx;
+}
+.font-size-m{
+  font-size:31rpx;
+}
+.font-size-l{
+  font-size:35rpx;
+}
+.font-size-xl{
+  font-size:37rpx;
+}
+.font-color-grey{
+  color:grey;
+}
+.main-color-front{
+  color:#00CED1;
+}
+.main-color-background{
+  background-color:#00CED1;
+}

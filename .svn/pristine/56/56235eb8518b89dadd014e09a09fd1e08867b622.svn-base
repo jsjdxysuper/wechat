@@ -1,0 +1,4 @@
+.default{flex:1;border-right:1px solid gainsboro;color:#000;font-weight:bold;text-align: center;}
+.red{color:#00CED1;flex:1;border-right:1px solid gainsboro;font-weight:bold;text-align: center;}
+.show{display:block;}
+.hidden{display:none;}

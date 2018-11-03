@@ -1,0 +1,79 @@
+/* pages/course/courseSchedule/courseSchedule.wxss */
+.date-button-selected{
+  width:50rpx;
+  height:50rpx;
+  border-radius:100rpx;
+  background-color:#00CED1;
+  text-align:center;
+}
+.date-button-notselected{
+  width:50rpx;
+  height:50rpx;
+  border-radius:100rpx;
+  text-align:center;
+}
+.swiper-tab{  
+    width: 700rpx;
+    margin-left: auto;
+    margin-right:auto;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    /*border-bottom: 2rpx solid #777777;*/
+    text-align: center;  
+    display:flex;
+    justify-content: space-around;
+    height:80rpx;
+    background-color: white;
+    padding-top:20rpx;
+} 
+.swiper-tab-list{
+  /* font-size: 30rpx;   */
+  width: 20%;  
+  
+}  
+.on{ 
+  color:#00CED1;  
+  border-bottom: 8rpx solid #00CED1;
+}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden;background-color: white; }  
+.swiper-box view{  
+    text-align: center;  
+}  
+.widthSection-middle{
+  width:700rpx;
+  margin-left:auto;
+  margin-right:auto;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.swiper-content{
+  width:700rpx;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.swiper-content-item{
+  width:700rpx;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 10rpx;
+}
+
+.swiper-content-item-up{
+  width:700rpx;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:white;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.swiper-content-item-down{
+  width:700rpx;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:white;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  height: 80rpx;
+}

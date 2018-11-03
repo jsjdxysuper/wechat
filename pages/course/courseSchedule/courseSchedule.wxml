@@ -1,0 +1,76 @@
+<!--pages/course/courseSchedule/courseSchedule.wxml-->
+ <view class="split_m"></view>
+<view class="widthSection-middle" style='background-color:white;'>
+ 
+  <view style='display:flex;flex-direction:row;align-items:center;justify-content:space-around;padding:40rpx 20rpx;'>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>日</view>
+      <view class='date-button-notselected'>3</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>一</view>
+      <view class='date-button-notselected'>4</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>二</view>
+      <view class='date-button-notselected'>5</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>三</view>
+      <view class='date-button-notselected'>6</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>四</view>
+      <view  class='date-button-notselected'>7</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>五</view>
+      <view class='date-button-notselected'>8</view>
+    </view>
+    <view style='display:flex;flex-direction:column;align-items:center;justify-content:space-between;'>
+      <view style='margin-bottom:20rpx;'>六</view>
+      <view class='date-button-selected'>9</view>
+    </view>
+  </view>
+</view>
+<view class="split_s"></view>
+
+<!--Tab选项卡-->
+<view class="swiper-tab">  
+    <view class="font-color-grey swiper-tab-list {{currentTab==0 ? 'on' : ''}} font-size-l" data-current="0" bindtap="swichNav">我的课表</view>  
+    <view class="font-color-grey swiper-tab-list {{currentTab==1 ? 'on' : ''}} font-size-l" data-current="1" bindtap="swichNav">所有课表</view>      
+</view>  
+<view class="split_s"></view>
+<swiper current="0"  class="swiper-content" duration="300" bindchange="bindChange" style='height:{{swiperHeight}}'>
+  <swiper-item class="swiper-content-item" bindtap="swiper_item_load" >
+    <view style='display:flex;flex-direction:column;'>
+      <view style='display:flex;flex-direction:column;height:275rpx;'>
+        <view style='display:flex;flex-direction:column;padding:10rpx 20rpx;' class="swiper-content-item-up">
+          <view style='margin:10rpx;' class='font-size-m'>匠人精神花艺进阶</view>
+          <view style='margin:10rpx;font-weight:bold;'  class='font-size-l'>10:00-10:30</view>
+          <view style='margin:10rpx;'  class='font-size-m'>授课老师：Rose</view>
+        </view>
+        <view class="split_ss"></view>
+        <view class="swiper-content-item-down" style='display:flex;flex-direction:row;justify-content:flex-end;align-items:center;'>
+          <view class="font-size-s" style='background-color:#00CED1;text-align:center;vertical-align:middle;color:white;margin-right:50rpx;padding:10rpx 40rpx;'>预约</view>
+        </view>
+      </view>
+        <view class="split_m"></view>
+      <view style='display:flex;flex-direction:column;height:275rpx;'>
+        <view style='display:flex;flex-direction:column;padding:10rpx 20rpx;' class="swiper-content-item-up">
+          <view style='margin:10rpx;' class='font-size-m'>匠人精神花艺进阶</view>
+          <view style='margin:10rpx;font-weight:bold;'  class='font-size-l'>10:00-10:30</view>
+          <view style='margin:10rpx;'  class='font-size-m'>授课老师：Rose</view>
+        </view>
+        <view class="split_ss"></view>
+        <view class="swiper-content-item-down" style='display:flex;flex-direction:row;justify-content:flex-end;align-items:center;'>
+          <view class="font-size-s" style='background-color:#00CED1;text-align:center;vertical-align:middle;color:white;margin-right:50rpx;padding:10rpx 40rpx;'>预约</view>
+        </view>
+      </view>
+    </view>
+      
+  </swiper-item>
+  <swiper-item class="swiper-content-item">
+    <view>01</view>
+  </swiper-item>
+</swiper>

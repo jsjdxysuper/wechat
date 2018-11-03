@@ -1,0 +1,15 @@
+<!--pages/briefIntroduction/briefIntroduction.wxml-->
+<view style='display:flex;justify-content:center'>
+<image src="{{image_object_list['companyTag']}}" style='width:440rpx;height:450rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image></view>
+
+<view style="display:flex;justify-content:center;">
+  <view style='width:700rpx;margin:20rpx 0;'>
+<view><text>暿艺东方艺术团</text></view>
+<view><text>承接组织策划企业年会、晚会、发布会，为企业员工艺术集训、文艺活动排练等相关活动。演员集合了中国音乐学院，北京舞蹈学院，中央音乐学院，解放军艺术学院等院校优秀毕业生，与各文艺团体优秀演员合作，已在全国各地组织演出过上百场的演出活动。</text></view>
+</view>
+</view>
+<view style="display:flex;flex-direction:row;flex-wrap:wrap">
+  <view wx:for="image_list">
+    <image src="{{image_list[index]}}" style='width:240rpx;height:250rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/briefIntroduction/briefIntroduction.wxml-->
+<view style='display:flex;justify-content:center'>
+<image src="{{image_object_list['companyTag']}}" style='width:440rpx;height:450rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image></view>
+
+<view style="display:flex;justify-content:center;">
+  <view style='width:700rpx;margin:20rpx 0;'>
+  <view><text>暿艺东方艺术培训</text></view>
+  <view ><text>是一家专业系统学习的艺术交流学习机构，向各大高等院校输送人才，特长专业化培养，学院分布于社会各界、及各个学校的青少年，拥有中国音乐学院和北京舞蹈学院及各大文艺团体艺术家的师资力量及技术支持，现拥有针对少儿及青少年的舞蹈，声乐，口才，钢琴等器乐类的体系学习。</text></view>
+  </view>
+</view>
+
+<view style="display:flex;flex-direction:row;flex-wrap:wrap">
+  <view wx:for="image_list">
+    <image src="{{image_list[index]}}" style='width:240rpx;height:250rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image>
+  </view>
+</view>

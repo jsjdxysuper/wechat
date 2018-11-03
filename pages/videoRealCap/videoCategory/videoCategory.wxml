@@ -1,0 +1,15 @@
+<!--pages/teachers/teacherDetail/teacherDetail.wxml-->
+<view class="myContainer">
+  <view class="myPage">
+    <view style='display:flex;flex-direction:column;align-items:center;'>
+      <view style='background-color:#00CED1;height:150rpx;width:100%;'></view>
+
+
+
+
+
+
+
+    </view>
+  </view>
+</view>

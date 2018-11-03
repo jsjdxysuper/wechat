@@ -1,0 +1,67 @@
+<view class="swiper-tab">  
+    <view class="font-color-grey swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>  
+    <view class="font-color-grey swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">郁金香</view>  
+    <view class="font-color-grey swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">栀子花</view>  
+    
+</view>  
+  <view class='font-size-xl' style='margin:20rpx;'>共2个课程</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+
+    <swiper-item>  
+          <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey">全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+        <view class="split_x"></view>
+    <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey" >全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+    </swiper-item>  
+
+    <swiper-item>  
+          <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey" >全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+    </swiper-item>  
+
+    <swiper-item>  
+          <!--精品课程内容-->
+    <view  class='downSection' style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+      <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+      <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
+        <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
+        <view class="font-size-ss font-color-grey" >全款报名可享受立减优惠</view>
+        <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
+          <view class="font-size-s font-color-grey" >1课时</view>
+          <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+        </view>
+      </view>
+    </view><!--精品课程内容-->
+    </swiper-item>  
+</swiper>  
