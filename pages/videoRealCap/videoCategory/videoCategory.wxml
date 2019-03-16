@@ -2,14 +2,35 @@
 <view class="myContainer">
   <view class="myPage">
     <view style='display:flex;flex-direction:column;align-items:center;'>
-      <view style='background-color:#00CED1;height:150rpx;width:100%;'></view>
+      <view style='background-color:#00CED1;height:200rpx;width:100%;'></view>
+        <image style="width:650rpx;margin-top:-180rpx;height:250rpx;border-radius: 2%;" src='/utils/image/videoRealHead.jpg'></image>
+        
 
-
-
-
-
-
-
+        <view style='width:100%;margin-top:20rpx;'>
+          <scroll-view scroll-x="true" class="tab-head" scroll-left="{{scrollLeft}}" >
+              < view wx:for="{{catagoryList}}" wx:for-item="item" wx:for-index="idx" class="tab-item {{currentTab==idx?'active':''}}"  data-current="{{idx}}" bindtap="swichNav">{{item.cName}}</view>
+          </scroll-view>
+          <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+          style="height:{{winHeight}}rpx">
+              <swiper-item wx:for="{{catagoryList}}" wx:for-item="item" wx:for-index="idx">
+                  <scroll-view scroll-y="true" class="scoll-h" >
+                      <block wx:for="{{item.subTree}}" wx:for-item="subItem">
+                          <view class="item-ans">
+                              <view class="avatar">
+                                  <image class="img" src="{{resourcePath}}{{subItem.cMark3}}"></image>
+                              </view>
+                              <view class="expertInfo">
+                                  <view class="name">{{subItem.cName}}</view>
+                                  <view class="tag">{{subItem.cMark1}}</view>
+                                  <view class="answerHistory">{{subItem.cMark2}}</view>
+                              </view>
+                              <navigator url="/pages/videoRealCap/videoDetail/videoDetail?id=doite" class="askBtn">查看</navigator> 
+                          </view>
+                      </block>
+                  </scroll-view>
+              </swiper-item>
+          </swiper>
+        </view>
     </view>
   </view>
 </view>

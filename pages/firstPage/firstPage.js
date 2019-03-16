@@ -12,15 +12,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("oookkkk");
     var that = this;
     wx.request({
-      url: 'https://www.liyang024.top/px/wechat/backinterface/fistPage/turnPage.do',
+      url: getApp().globalData.REMOTE_URL+'/weixin/circlePic',
       data: "OK",
       method: 'POST',
       success: function (res) {
         console.log('submit success');
-        var splits = res.data.split(',');
+        var splits = res.data.cVal.split(',');
         
         for (let i = 0; i < splits.length; i++) {
           splits[i] = getApp().data.REMOTE_URL + '/'+splits[i];

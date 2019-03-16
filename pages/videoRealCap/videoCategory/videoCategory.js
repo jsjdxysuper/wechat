@@ -5,15 +5,84 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winHeight: "",//窗口高度
+    currentTab: 0, //预设当前项的值
+    scrollLeft: 0, //tab标题的滚动条位置
+    expertList: [{ //假数据
+      img: "avatar.png",
+      name: "欢顔",
+      tag: "知名情感博主",
+      answer: 134,
+      listen: 2234
+    }],
+    catagoryList:[],
+    resourcePath: getApp().globalData.RESOURCES_URL
+  },
+  // 滚动切换标签样式
+  switchTab: function (e) {
+    this.setData({
+      currentTab: e.detail.current
+    });
+    this.checkCor();
+  },
+  // 点击标题切换当前页时改变样式
+  swichNav: function (e) {
+    var cur = e.target.dataset.current;
+    if (this.data.currentTab == cur) { return false; }
+    else {
+      this.setData({
+        currentTab: cur
+      })
+    }
+  },
+  //判断当前滚动超过一屏时，设置tab标题滚动条。
+  checkCor: function () {
+    if (this.data.currentTab > 3) {
+      this.setData({
+        scrollLeft: 300
+      })
+    } else {
+      this.setData({
+        scrollLeft: 0
+      })
+    }
+  },
+  onLoad: function () {
+    var that = this;
+    wx.request({
+      url: getApp().globalData.REMOTE_URL + '/weixin/catagoryTree/catagoryList',
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
+        console.log('submit success');
+        that.setData({ catagoryList: res.data });
+
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
+
+    var that = this;
+    //  高度自适应
+    wx.getSystemInfo({
+      success: function (res) {
+        var clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR =  clientWidth/750;
+        var calc = clientHeight / rpxR - 350;
+        console.log(calc)
+        that.setData({
+          winHeight: calc
+        });
+      }
+    });
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
+  //footerTap: app.footerTap,
 
   /**
    * 生命周期函数--监听页面初次渲染完成

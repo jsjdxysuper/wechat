@@ -3,8 +3,9 @@ App({
   data: { REMOTE_URL: 'https://www.liyang024.top'},
   globalData:{
     LOCAL_URL:'http://localhost',
-    REMOTE_URL:'https://www.liyang024.top',
-    RESOURCES_URL:'https://www.liyang024.top/resources/'
+    //REMOTE_URL:'https://www.liyang024.top',
+    REMOTE_URL: 'http://localhost:8080/',
+    RESOURCES_URL:'http://localhost:8080/resources/'
     },
   onLaunch: function () {
     // 展示本地存储能力

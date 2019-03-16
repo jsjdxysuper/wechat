@@ -49,9 +49,9 @@
           </navigator>
         </view>
         <view >
-          <navigator url="/pages/teachers/teacherList/teacherList" hover-class="navigator-hover">
+          <navigator url="/pages/teachers/teacherArtistCata/teacherArtistCata" hover-class="navigator-hover">
             <view><image class='menu-image'   src="../../utils/image/teacher.png"></image></view>
-            <view class='font-size-m'>授课老师</view>
+            <view class='font-size-m'>教员艺人</view>
           </navigator>
         </view>
         <view >
@@ -142,7 +142,7 @@
 
     <!--视频1-->
     <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
-      <view><video style='width:100%' src="https://www.liyang024.top/resources/vid_20181031_205227.ts" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+      <view><video style='width:100%' src="https://www.liyang024.top/resources/VID_20181031_205227.mp4" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
 
       </video></view>
       <view class="font-size-l" style='margin-left:20rpx;'>舞蹈师范课程</view>
@@ -150,7 +150,7 @@
     <view style="height:25rpx;"></view>
     <!--视频2-->
     <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
-      <view><video style='width:100%' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+      <view><video style='width:100%' src="https://www.liyang024.top/resources/VID_20181031_205227.mp4" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
 
       </video></view>
       <view class="font-size-l" style='margin-left:20rpx;'>舞蹈师范课程</view>
@@ -158,7 +158,7 @@
     <view style="height:25rpx;"></view>
     <!--视频3-->
     <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
-      <view><video style='width:100%' src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+      <view><video style='width:100%' src="https://www.liyang024.top/resources/VID_20181031_205227.mp4" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
 
       </video></view>
       <view class="font-size-l" style='margin-left:20rpx;'>舞蹈师范课程</view>

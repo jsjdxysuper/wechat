@@ -10,7 +10,9 @@
     "pages/course/courseSchedule/courseSchedule",
     "pages/trainAgency/trainAgency",
     "pages/artTroupe/artTroupe",
-    "pages/videoRealCap/videoCategory/videoCategory"
+    "pages/videoRealCap/videoCategory/videoCategory",
+    "pages/videoRealCap/videoDetail/videoDetail",
+    "pages/teachers/teacherArtistCata/teacherArtistCata"
   ],
   "window": {
     "backgroundTextStyle": "light",

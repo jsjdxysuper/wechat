@@ -1,4 +1,4 @@
-// pages/videoCategory/videoCategory.js
+// pages/teachers/teachers.js
 Page({
 
   /**
@@ -12,7 +12,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistTopCatagory',
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
 
+        var splits = res.data;
+        that.setData({ teacherArtistList: splits })
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
   },
 
   /**

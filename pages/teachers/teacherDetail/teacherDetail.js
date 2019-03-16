@@ -24,7 +24,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+    var that = this;
+    wx.request({
+      url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistDetail?id=' + options.id,
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
+
+        var personTxtImgContent = res.data.teacherArtistTxtImgContent;
+        var personVideoContent = res.data.teacherArtistVideoContent
+        var personOutline = res.data.teacherArtistOutline;
+        that.setData({ teacherArtistTxtImgContent: personTxtImgContent });
+        that.setData({ teacherArtistVideoContent: personVideoContent });
+        that.setData({ teacherArtistOutline: personOutline });
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
   },
 
   /**

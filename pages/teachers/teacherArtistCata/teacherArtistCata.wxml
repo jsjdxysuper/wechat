@@ -3,7 +3,7 @@
   <view class="myPage" style='display:flex;flex-direction:column;align-items:center;'>
     <view class="split_x"></view>
     <view wx:for="{{teacherArtistList}}">
-      <navigator url="/pages/teachers/teacherDetail/teacherDetail?id={{item.cId}}" hover-class="navigator-hover">
+      <navigator url="/pages/teachers/teacherList/teacherList?id={{item.cId}}&title={{item.cTitle}}" hover-class="navigator-hover">
         <view style='width:700rpx;display:flex;flex-direction:row;justify-content:space-between;align-items:center;background-color:white;border-radius: 15rpx;padding:15rpx;'>
         
           <view style='display:flex;flex-direction:row;align-items:center;margin-left:20rpx;'>

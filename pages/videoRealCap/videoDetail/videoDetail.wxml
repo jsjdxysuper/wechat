@@ -1,0 +1,9 @@
+<!--pages/videoRealCap/videoDetail/videoDetail.wxml-->
+<!--视频1-->
+    <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
+      <view><video style='width:100%' src="https://www.liyang024.top/resources/VID_20181031_205227.mp4" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+
+      </video></view>
+      <view class="font-size-l" style='margin-left:20rpx;'>舞蹈师范课程</view>
+    </view><!--视频1-->
+    <view style="height:25rpx;"></view>

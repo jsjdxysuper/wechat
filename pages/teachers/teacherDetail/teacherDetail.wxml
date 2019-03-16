@@ -10,9 +10,9 @@
           <view class='main-color-front font-size-s' >推荐TA</view>
         </view>
         <view style='display:flex;flex-direction:column;justify-content:flex-end;align-items:center;margin-top:-80rpx;'>
-          <image src="/utils/image/teacher1.jpg" style='align-self:center;width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>      
-          <view class="font-size-l font-color-grey" style='margin-top:20rpx;'>darry</view>
-          <view  class="font-size-xl" style='margin-top:10rpx;'>高级花艺师</view>
+          <image src="{{teacherArtistOutline.cHeadportrait}}" style='align-self:center;width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>      
+          <view class="font-size-l font-color-grey" style='margin-top:20rpx;'>{{teacherArtistOutline.cTitle}}</view>
+          <view  class="font-size-xl" style='margin-top:10rpx;'>{{teacherArtistOutline.cSubtitle}}</view>
         </view>
       </view>
       <view class="split_ss"></view><!--我是分割器-->
@@ -26,21 +26,35 @@
       <view class="split_m"></view><!--我是分割器-->
 
       <view style='background:white;width:680rpx;border-radius: 15rpx;'>
-        <view class="{{selected?'show':'hidden'}} font-size-l" style='padding:30rpx;text-indent: 2em;text-align: left;'>国际公认的顶级花艺设计师，因其独具创意的花艺设计风格而闻名国际花卉界，倾向于在作品的色彩、造型和明暗表现上做融合，被外界称为“森林魔术师”。同时他本人在景观建筑以及花艺手绘方面也颇有造诣，可以通过景观艺术满足大众商业活动和个人婚礼活动的花艺设计需求。</view>
-
-        <view class="{{selected1?'show':'hidden'}}">
-          <!--课程内容-->
-          <view  style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
-            <view><image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
-            <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'>
-              <view class="font-size-l" style='font-weight:bold;'>匠人精神花艺进阶</view>
-              <view class="font-size-ss font-color-grey">全款报名可享受立减优惠</view>
-              <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'>
-                <view class="font-size-s font-color-grey" >1课时</view>
-                <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
-              </view>
+        <view class="{{selected?'show':'hidden'}} font-size-l" ><!--文字或者图片-->
+          <view   
+              style='display:flex;flex-direction:column;align-items:center;justify-content:center;text-align: left;'>
+            <view wx:for="{{teacherArtistTxtImgContent}}">
+              <view wx:if="{{item.cType=='txt'}}" style='padding:30rpx;text-indent: 2em;'>{{item.cContent}}</view>
+              <image wx:if="{{item.cType=='img'}}"
+            mode="aspectFit"   src="{{item.cContent}}"
+                ></image>
             </view>
-          </view><!--课程内容-->
+          </view>
+        </view>
+
+        <view class="{{selected1?'show':'hidden'}}"><!--视频-->
+          <view  wx:for="{{teacherArtistVideoContent}}">
+          <!--课程内容-->
+            <view  style='border-radius: 15rpx;display:flex;justify-content:flex-start;background-color:white;'>
+              <view>
+              <image src="https://www.liyang024.top/resources/dance2.jfif" style='width:300rpx;height:200rpx;border-radius: 10rpx;margin:20rpx 20rpx;' ></image></view>
+              <view style='margin:20rpx 20rpx;display:flex;flex-direction:column;justify-content:space-between;width:420rpx;'><!--2-->
+                <view class="font-size-l" style='font-weight:bold;'>{{item.cDes1}}</view>
+                <view class="font-size-ss font-color-grey">{{item.cDes2}}</view>
+                <view style='display:flex;flex-direction:row;justify-content:space-between;align-items:center;'><!--1-->
+                  <view class="font-size-s font-color-grey" ></view>
+                  <view class="font-size-s" style='background-color:#009933;color:white;padding:15rpx 30rpx;border-radius: 15rpx;'>预约试听</view>
+                </view><!--1-->
+              </view><!--2-->
+            </view><!--课程内容-->
+            <view class="split_m" style='background-color:#eeeeee;'></view><!--我是分割器-->
+          </view>
         </view>
       </view>
 
