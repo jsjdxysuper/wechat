@@ -9,7 +9,7 @@
 </view>
 </view>
 <view style="display:flex;flex-direction:row;flex-wrap:wrap">
-  <view wx:for="image_list">
+  <view wx:for="image_list" wx:key="{{image_list[index]}}">
     <image src="{{image_list[index]}}" style='width:240rpx;height:250rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image>
   </view>
 </view>

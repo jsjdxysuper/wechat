@@ -7,7 +7,7 @@
       <!--轮转图片-->
       <view style='width:700rpx;'>
         <swiper indicator-dots="true" autoplay="true" interval="2000" duration="490" style='width:700rpx;height:451rpx'>
-          <view  wx:for="{{imageUrls}}">
+          <view  wx:for="{{imageUrls}}" wx:key="{{item}}">
           <swiper-item>
             <image src="{{item}}"   style='width:700rpx;' />
           </swiper-item>

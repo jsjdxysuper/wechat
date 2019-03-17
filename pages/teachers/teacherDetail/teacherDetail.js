@@ -1,4 +1,5 @@
 // pages/teachers/teacherDetail/teacherDetail.js
+const app = getApp();
 Page({
 
   /**
@@ -6,7 +7,8 @@ Page({
    */
   data: {
     selected:true,
-    selected1:false
+    selected1:false,
+    resourceUrl: ""
   },
   selected:function (e) {
     this.setData({
@@ -24,7 +26,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      resourceUrl: getApp().globalData.RESOURCES_URL});
     var that = this;
     wx.request({
       url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistDetail?id=' + options.id,
@@ -40,10 +43,10 @@ Page({
         that.setData({ teacherArtistOutline: personOutline });
       },
       fail: function (res) {
-        console.log('submit fail');
+        //console.log('submit fail');
       },
       complete: function (res) {
-        console.log('submit complete');
+        //console.log('submit complete');
       }
     })
   },

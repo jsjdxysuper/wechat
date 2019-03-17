@@ -8,13 +8,13 @@
 
         <view style='width:100%;margin-top:20rpx;'>
           <scroll-view scroll-x="true" class="tab-head" scroll-left="{{scrollLeft}}" >
-              < view wx:for="{{catagoryList}}" wx:for-item="item" wx:for-index="idx" class="tab-item {{currentTab==idx?'active':''}}"  data-current="{{idx}}" bindtap="swichNav">{{item.cName}}</view>
+              < view wx:for="{{catagoryList}}" wx:key="{{item.cUid}}" wx:for-item="item" wx:for-index="idx" class="tab-item {{currentTab==idx?'active':''}}"  data-current="{{idx}}" bindtap="swichNav">{{item.cName}}</view>
           </scroll-view>
           <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
           style="height:{{winHeight}}rpx">
-              <swiper-item wx:for="{{catagoryList}}" wx:for-item="item" wx:for-index="idx">
+              <swiper-item wx:for="{{catagoryList}}" wx:key="{{item.cUid}}" wx:for-item="item" wx:for-index="idx">
                   <scroll-view scroll-y="true" class="scoll-h" >
-                      <block wx:for="{{item.subTree}}" wx:for-item="subItem">
+                      <block wx:for="{{item.subTree}}" wx:key="{{item.cUid}}" wx:for-item="subItem">
                           <view class="item-ans">
                               <view class="avatar">
                                   <image class="img" src="{{resourcePath}}{{subItem.cMark3}}"></image>

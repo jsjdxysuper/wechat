@@ -18,7 +18,7 @@ Page({
       data: "OK",
       method: 'POST',
       success: function (res) {
-        console.log('submit success');
+        //console.log('submit success');
         var splits = res.data.cVal.split(',');
         
         for (let i = 0; i < splits.length; i++) {
@@ -27,10 +27,10 @@ Page({
         that.setData({ imageUrls: splits })
       },
       fail: function (res) {
-        console.log('submit fail');
+        //console.log('submit fail');
       },
       complete: function (res) {
-        console.log('submit complete');
+        //console.log('submit complete');
       }
     })
   },

@@ -27,10 +27,10 @@ Page({
         that.setData({ teacherArtistList: splits })
       },
       fail: function (res) {
-        console.log('submit fail');
+        //console.log('submit fail');
       },
       complete: function (res) {
-        console.log('submit complete');
+        //console.log('submit complete');
       }
     })
   },
