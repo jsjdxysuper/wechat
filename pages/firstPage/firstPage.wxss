@@ -13,3 +13,11 @@
   width:100%;
   padding-bottom:30rpx;
 }
+.addIcon{
+  position:fixed;
+  width:82rpx;
+  height: 82rpx;
+  bottom:100rpx;
+  right:60rpx;
+  z-index:999;
+}

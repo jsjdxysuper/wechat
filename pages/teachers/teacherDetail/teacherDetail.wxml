@@ -10,7 +10,7 @@
           <view class='main-color-front font-size-s' >推荐TA</view>
         </view>
         <view style='display:flex;flex-direction:column;justify-content:flex-end;align-items:center;margin-top:-80rpx;'>
-          <image src="{{teacherArtistOutline.cHeadportrait}}" style='align-self:center;width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>      
+          <image src="{{resourceUrl}}{{teacherArtistOutline.cHeadportrait}}" style='align-self:center;width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>      
           <view class="font-size-l font-color-grey" style='margin-top:20rpx;'>{{teacherArtistOutline.cTitle}}</view>
           <view  class="font-size-xl" style='margin-top:10rpx;'>{{teacherArtistOutline.cSubtitle}}</view>
         </view>
@@ -31,8 +31,8 @@
               style='display:flex;flex-direction:column;align-items:center;justify-content:center;text-align: left;'>
             <view wx:for="{{teacherArtistTxtImgContent}}" wx:key="{{item.cId}}">
               <view wx:if="{{item.cType=='txt'}}" style='padding:30rpx;text-indent: 2em;'>{{item.cContent}}</view>
-              <image wx:if="{{item.cType=='img'}}"
-            mode="aspectFit"   src="{{resourceUrl}}/{{item.cContent}}"
+              <image wx:if="{{item.cType=='img'}}" style='width:620rpx;'
+            mode="widthFix"   src="{{resourceUrl}}/{{item.cContent}}"
                 ></image>
             </view>
           </view>
@@ -42,8 +42,8 @@
           <view style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;">
             <view  wx:for="{{teacherArtistVideoContent}}"  wx:key="{{item.cId}}" style='padding-top:20rpx;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;'>
               <!--视频1-->
-              <view  style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
-                <video  src="{{resourceUrl}}/{{item.cContent}}" controls='true' poster="https://www.liyang024.top/resources/videoImage.jpg">
+              <view  style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;padding:20rpx;' >
+                <video  src="{{resourceUrl}}/{{item.cContent}}" controls='true' style="width:640rpx;" poster="https://www.liyang024.top/resources/videoImage.jpg">
                 </video>
                 <view class="font-size-l" style='padding:20rpx;height:50rpx;'>{{item.cDes1}}</view>
               </view><!--视频1-->

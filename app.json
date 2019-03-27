@@ -12,12 +12,18 @@
     "pages/artTroupe/artTroupe",
     "pages/videoRealCap/videoCategory/videoCategory",
     "pages/videoRealCap/videoDetail/videoDetail",
-    "pages/teachers/teacherArtistCata/teacherArtistCata"
+    "pages/teachers/teacherArtistCata/teacherArtistCata",
+    "pages/contactUs/contactUs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00CED1",
     "navigationBarTitleText": "暿艺东方",
     "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口,以便于为您提供导航信息"
+    }
   }
 }

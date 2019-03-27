@@ -5,24 +5,62 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    videoImage: getApp().globalData.ALL_VIDEO_iMG,
+    remoteUrl: getApp().globalData.REMOTE_URL,
+    resourceUrl: getApp().globalData.RESOURCES_URL,
+    fineCourseList:""
+  }, bindtapdianhua(event){
+    console.log('submit complete');
   },
-
+  locationNavi(event) {
+    wx.getLocation({//获取当前经纬度
+      type: 'wgs84', //返回可以用于wx.openLocation的经纬度，官方提示bug: iOS 6.3.30 type 参数不生效，只会返回 wgs84 类型的坐标信息  
+      success: function (res) {
+        wx.openLocation({//​使用微信内置地图查看位置。
+          latitude: 39.8998800000,//要去的纬度-地址
+          longitude: 116.4913800000,//要去的经度-地址
+          name: "北京暿艺东方文化传播有限公司",
+          address: '东四环中路78号大成国际中心A2座1211'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     var that = this;
+
     wx.request({
-      url: getApp().globalData.REMOTE_URL+'/weixin/circlePic',
+      url: getApp().globalData.REMOTE_URL + 'weixin/sysCode?typeid=sysset&id=fineCourse',
       data: "OK",
       method: 'POST',
       success: function (res) {
         //console.log('submit success');
-        var splits = res.data.cVal.split(',');
-        
-        for (let i = 0; i < splits.length; i++) {
-          splits[i] = getApp().data.REMOTE_URL + '/'+splits[i];
+        var fineCourseListLo = res.data;
+
+        that.setData({ fineCourseList: fineCourseListLo });
+      },
+      fail: function (res) {
+        //console.log('submit fail');
+      },
+      complete: function (res) {
+        //console.log('submit complete');
+      }
+    });
+
+    
+    wx.request({
+      url: getApp().globalData.REMOTE_URL +'weixin/sysCode?typeid=sysset&id=circlePic',
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
+        //console.log('submit success');
+        var sysCodeList = res.data;
+        var splits = [];
+        for (let i = 0; i < sysCodeList.length; i++) {
+          splits[i] = getApp().globalData.RESOURCES_URL + '/' + sysCodeList[i].cVal;
         }
         that.setData({ imageUrls: splits })
       },

@@ -2,12 +2,17 @@
 App({
   data: { REMOTE_URL: 'https://www.liyang024.top'},
   globalData:{
-    LOCAL_URL:'http://localhost',
+    LOCAL_URL:'http://localhost:8080',
     //REMOTE_URL:'https://www.liyang024.top',
     REMOTE_URL: 'http://localhost:8080/',
-    RESOURCES_URL:'http://localhost:8080/resources/'
+    RESOURCES_URL:'http://localhost:8080/resources/',
+    ALL_VIDEO_iMG:""
     },
+  onShow:function(){
+   
+  },
   onLaunch: function () {
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -38,6 +43,11 @@ App({
           })
         }
       }
-    })
+    });
+
+
+
   }
+
+
 })

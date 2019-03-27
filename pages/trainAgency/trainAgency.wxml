@@ -1,6 +1,6 @@
 <!--pages/briefIntroduction/briefIntroduction.wxml-->
 <view style='display:flex;justify-content:center'>
-<image src="{{image_object_list['companyTag']}}" style='width:440rpx;height:450rpx;margin:5rpx;' data-src="{{image_list[index]}}" bindtap="imgYu" ></image></view>
+<image src="{{titleImage}}" style='width:440rpx;height:450rpx;margin:5rpx;' data-src="{{titleImage}}" bindtap="imgYu" ></image></view>
 
 <view style="display:flex;justify-content:center;">
   <view style='width:700rpx;margin:20rpx 0;'>

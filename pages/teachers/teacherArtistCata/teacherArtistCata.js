@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    resourceUrl: getApp().globalData.RESOURCES_URL
   },
 
   /**
@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistTopCatagory',
+      url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistList',
       data: "OK",
       method: 'POST',
       success: function (res) {

@@ -6,7 +6,7 @@ Page({
    */
   data: {
     image_list: [],
-    image_object_list: {}
+    titleImage: {}
   },
   //图片点击事件
   imgYu: function (event) {
@@ -22,38 +22,50 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var imageList = new Array();
-    var resourcesUrl = getApp().globalData.RESOURCES_URL;
-    var imageObjectList = new Object();
+    var that = this;
 
-    imageObjectList['childrenDancePeacock'] = resourcesUrl + 'briefIntroduction/mmexport1536242704780.jpg';
-    imageObjectList['companyTag'] = resourcesUrl + 'briefIntroduction/mmexport1536242478730.jpg';
+    wx.request({
+      url: getApp().globalData.REMOTE_URL + 'weixin/sysCode?typeid=sysset&id=artTroupeTitlePic',
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
+        //console.log('submit success');
+        var titleImage = getApp().globalData.RESOURCES_URL + res.data[0].cVal;
 
-    imageObjectList['fourGirlKneeDance'] = resourcesUrl + 'briefIntroduction/mmexport1536242673952.jpg';
-    imageObjectList['circleDance'] = resourcesUrl + 'briefIntroduction/mmexport1536242746175.jpg';
-    imageObjectList['teacherCommunication'] = resourcesUrl + 'briefIntroduction/mmexport1536242509056.jpg';
+        that.setData({ titleImage: titleImage });
+      },
+      fail: function (res) {
+        //console.log('submit fail');
+      },
+      complete: function (res) {
+        //console.log('submit complete');
+      }
+    });
 
-    imageObjectList['groupPhoto'] = resourcesUrl + 'briefIntroduction/mmexport1536242811011.jpg';
-    imageObjectList['wiredDance'] = resourcesUrl + 'briefIntroduction/mmexport1536242727203.jpg';
+    wx.request({
+      url: getApp().globalData.REMOTE_URL + 'weixin/sysCode?typeid=sysset&id=artTroupePic',
+      data: "OK",
+      method: 'POST',
+      success: function (res) {
+        //console.log('submit success');
+        var imageList = [];
+        var sysCodeList = res.data;
 
-    imageObjectList['pepaGirl'] = resourcesUrl + 'briefIntroduction/mmexport1536242826201.jpg';
+        for (let i = 0; i < sysCodeList.length; i++) {
+          imageList[i] = getApp().globalData.RESOURCES_URL + '/' + sysCodeList[i].cVal;
+        }
+        that.setData({ image_list: imageList });
+      },
+      fail: function (res) {
+        //console.log('submit fail');
+      },
+      complete: function (res) {
+        //console.log('submit complete');
+      }
+    });
 
 
 
-    var i = 0;
-    var x;
-
-    imageList[0] = imageObjectList['childrenDancePeacock'];
-    // imageList[1] = imageObjectList['companyTag'];
-    imageList[1] = imageObjectList['fourGirlKneeDance'];
-    imageList[2] = imageObjectList['circleDance'];
-    imageList[3] = imageObjectList['teacherCommunication'];
-    imageList[4] = imageObjectList['groupPhoto'];
-    imageList[5] = imageObjectList['wiredDance'];
-    imageList[6] = imageObjectList['pepaGirl'];
-
-    this.setData({ image_list: imageList });
-    this.setData({ image_object_list: imageObjectList });
   },
 
   /**

@@ -8,7 +8,7 @@ Page({
   data: {
     selected:true,
     selected1:false,
-    resourceUrl: ""
+    resourceUrl: getApp().globalData.RESOURCES_URL
   },
   selected:function (e) {
     this.setData({
@@ -26,8 +26,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      resourceUrl: getApp().globalData.RESOURCES_URL});
+
     var that = this;
     wx.request({
       url: getApp().globalData.REMOTE_URL + '/weixin/teacherArtistDetail?id=' + options.id,

@@ -7,7 +7,7 @@
         <view style='width:700rpx;display:flex;flex-direction:row;justify-content:space-between;align-items:center;background-color:white;border-radius: 15rpx;padding:15rpx;'>
         
           <view style='display:flex;flex-direction:row;align-items:center;margin-left:20rpx;'>
-            <image src="{{item.cHeadportrait}}" style='width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>
+            <image src="{{resourceUrl}}{{item.cHeadportrait}}" style='width:150rpx;height:150rpx;border-radius:300rpx;margin-right:20rpx;'></image>
             <view>
               <view style='font-size:35rpx;color:#888888'>{{item.cTitle}}</view>
               <view>{{item.cSubtitle}}</view>
