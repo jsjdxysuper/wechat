@@ -67,3 +67,39 @@ page {
 .main-color-background{
   background-color:#00CED1;
 }
+.text-overflow{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/**视频展示效果**/
+.video-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-color:white;
+  border-radius: 15rpx;
+  padding-bottom:30rpx;
+}
+.video-box .video{
+  width:90%;
+  height:300rpx;
+  margin-top:20rpx;
+  }
+.video-box .text-box{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:90%;
+}
+.video-box .text-box .two-line-text{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:80%;
+}

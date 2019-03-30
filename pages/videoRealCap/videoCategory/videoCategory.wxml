@@ -14,8 +14,24 @@
           style="height:{{winHeight}}rpx">
               <swiper-item wx:for="{{catagoryList}}" wx:key="{{item.cUid}}" wx:for-item="item" wx:for-index="idx">
                   <scroll-view scroll-y="true" class="scoll-h" >
+                      <view class="split_m"></view> 
                       <block wx:for="{{item.subTree}}" wx:key="{{item.cUid}}" wx:for-item="subItem">
-                          <view class="item-ans">
+                        <view class='downSection video-box' >
+                          <video class="video" src="{{resourceUrl}}{{item.cVal}}"
+                                    controls='true' poster="{{remoteUrl}}{{videoImage}}">
+                          </video>
+                          <view class="split_ss"></view>
+                          <view class="text-box">
+                            <view class="two-line-text">
+                              <view class="font-size-xl" style=''>舞蹈师范课程</view>
+                              <view class="font-size-l" style='color:grey;'><text class="text-overflow">舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程
+                                </text>
+                              </view>
+                            </view>
+                          </view>
+                        </view><!--视频1-->
+                        <view class="split_m"></view> 
+                          <!-- <view class="item-ans">
                               <view class="avatar">
                                   <image class="img" src="{{resourcePath}}{{subItem.cMark3}}"></image>
                               </view>
@@ -25,7 +41,7 @@
                                   <view class="answerHistory">{{subItem.cMark2}}</view>
                               </view>
                               <navigator url="/pages/videoRealCap/videoDetail/videoDetail?id=doite" class="askBtn">查看</navigator> 
-                          </view>
+                          </view> -->
                       </block>
                   </scroll-view>
               </swiper-item>

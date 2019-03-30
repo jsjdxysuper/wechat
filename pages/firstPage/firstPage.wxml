@@ -75,13 +75,21 @@
 
     <!--视频1-->
     <view wx:for="{{fineCourseList}}" wx:key="{{item.cId}}">
-      <view class='downSection' style='display:flex;flex-direction:column;background-color:white;border-radius: 15rpx;' >
-        <view><video style='width:100%' src="{{resourceUrl}}{{item.cVal}}" controls='true' poster="{{remoteUrl}}{{videoImage}}">
-
-        </video></view>
-        <view class="font-size-l" style='margin-left:20rpx;'>舞蹈师范课程</view>
+      <view class='downSection video-box' >
+        <video class="video" src="{{resourceUrl}}{{item.cVal}}"
+                  controls='true' poster="{{remoteUrl}}{{videoImage}}">
+        </video>
+        <view class="split_ss"></view>
+        <view class="text-box">
+          <view class="two-line-text">
+            <view class="font-size-xl" style=''>舞蹈师范课程</view>
+            <view class="font-size-l" style='color:grey;'><text class="text-overflow">舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程
+              </text>
+            </view>
+          </view>
+        </view>
       </view><!--视频1-->
-      <view style="height:25rpx;"></view>
+      <view class="split_m"></view>
     </view>
   <view bindtap='bindtapdianhua'>
   <navigator url="/pages/contactUs/contactUs" hover-class="navigator-hover">
