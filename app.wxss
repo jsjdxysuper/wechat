@@ -84,7 +84,7 @@ page {
   align-items:center;
   background-color:white;
   border-radius: 15rpx;
-  padding-bottom:30rpx;
+  padding-bottom:10rpx;
 }
 .video-box .video{
   width:90%;

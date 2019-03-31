@@ -17,7 +17,7 @@
   position:fixed;
   width:82rpx;
   height: 82rpx;
-  bottom:100rpx;
+  bottom:60rpx;
   right:60rpx;
   z-index:999;
 }

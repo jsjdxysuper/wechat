@@ -1,4 +1,32 @@
 <!--pages/contactUs/contactUs.wxml-->
-<text>联系我们</text>
-<text>电话：18540255183</text>
-<text>微信：18540255183</text>
+<view style='width:100%;height:200rpx;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;'>
+  <view>----------联系我们----------</view>
+</view>
+
+<view class="contactUs">
+  <view class="oneLine">
+    <view>暿艺东方</view>
+    <view></view>
+  </view>
+  <view class="split_xx"></view>
+
+  <view  class="oneLine"  bindtap='makeCall'>
+    <view>电话</view>
+    <view style="display:flex;flex-direction:row;"><image style="width:40rpx;height:40rpx;" src="http://localhost:8080/resources/system/cellPhone.png"></image><view>{{cellPhone}}</view></view>
+    
+  </view>
+  <view class="split_xx"></view>
+
+  <view  class="oneLine" bindtap='makeCall'>
+    <view>手机</view>
+    <view style="display:flex;flex-direction:row;"><image style="width:40rpx;height:40rpx;" src="http://localhost:8080/resources/system/mobilePhone.png"></image><view>{{mobilePhone}}</view></view>
+    
+  </view>
+  <view class="split_xx"></view>
+
+  <view  class="oneLine" bindtap="copyWechat">
+    <view>微信</view>
+    <view  style="display:flex;flex-direction:row;"><image style="width:40rpx;height:40rpx;" src="http://localhost:8080/resources/system/wechat.png"></image><view>{{wechat}}</view></view>
+    
+  </view>
+</view>

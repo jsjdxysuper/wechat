@@ -76,15 +76,14 @@
     <!--视频1-->
     <view wx:for="{{fineCourseList}}" wx:key="{{item.cId}}">
       <view class='downSection video-box' >
-        <video class="video" src="{{resourceUrl}}{{item.cVal}}"
-                  controls='true' poster="{{remoteUrl}}{{videoImage}}">
+        <video class="video" src="{{resourceUrl}}{{item.cMark1}}"
+                  controls='true' >
         </video>
         <view class="split_ss"></view>
         <view class="text-box">
           <view class="two-line-text">
-            <view class="font-size-xl" style=''>舞蹈师范课程</view>
-            <view class="font-size-l" style='color:grey;'><text class="text-overflow">舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程舞蹈师范课程
-              </text>
+            <view class="font-size-xl" style=''>{{item.cName}}</view>
+            <view class="font-size-l" style='color:grey;'><text class="text-overflow">{{item.cMark2}}</text>
             </view>
           </view>
         </view>
@@ -93,7 +92,7 @@
     </view>
   <view bindtap='bindtapdianhua'>
   <navigator url="/pages/contactUs/contactUs" hover-class="navigator-hover">
-    <image  class="addIcon" src="http://localhost:8080/resources/system/redCustomServ.png"></image>
+    <image  class="addIcon" src="{{resourceUrl}}/system/contactUs1.png"></image>
   </navigator>
   </view>
 

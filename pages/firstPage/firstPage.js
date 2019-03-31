@@ -33,7 +33,7 @@ Page({
     var that = this;
 
     wx.request({
-      url: getApp().globalData.REMOTE_URL + 'weixin/sysCode?typeid=sysset&id=fineCourse',
+      url: getApp().globalData.REMOTE_URL + 'weixin/sysCodeVideoList?typeid=sysset&id=fineCourse',
       data: "OK",
       method: 'POST',
       success: function (res) {
